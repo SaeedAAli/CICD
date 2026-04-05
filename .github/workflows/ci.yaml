@@ -1,11 +1,11 @@
-name: Coderco CICD Workflow
+name: What is this You work forty hours a week doing nothing
 on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name : Trying pipeline again
+    - name: Will
       uses: actions/checkout@v2
-      -name: We are testing this workflow
-      run: "Jackpot"
+    - name: Testing this workflow
+      run: echo Son of a .... He stole my line
