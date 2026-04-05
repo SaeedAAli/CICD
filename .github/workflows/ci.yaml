@@ -1,11 +1,11 @@
-name: Coderco CI/CD Pipeline
+name: Coderco CICD Workflow
 on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on:ubuntu-latest:
     steps:
-    - name: checkout code
+      -name : Trying pipeline again
       uses: actions/checkout@v2
-    - name: we are testing this workflow
-      run: echo "Hello World"
+      -name: We are testing this workflow
+      run: "Jackpot"
