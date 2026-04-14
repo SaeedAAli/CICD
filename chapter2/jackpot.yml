@@ -1,0 +1,12 @@
+name: I've just Hit the Jackpot
+on: [push]
+
+jobs:
+  build:
+   runs-on: ubuntu-latest 
+   steps:
+    - name: Hello
+      uses: checkout/actions@v1
+    - name: Checking Stage
+      run: echo 
+     

@@ -14,3 +14,4 @@ jobs:
        uses: SaeedAAli/custom@main
        with:
          who-to-greet: "CoderCo Team"
+       run: 
