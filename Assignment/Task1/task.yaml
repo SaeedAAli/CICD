@@ -1,0 +1,12 @@
+name: Task 1 For Assignment
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Basic CI Pipeline
+        uses: actions/checkout@v2
+      - name: Using Dockerfile for Finalisation
+        run: docker build -t assignment-task1 Assignment/Task1/
+
