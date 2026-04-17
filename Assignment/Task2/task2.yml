@@ -1,0 +1,30 @@
+name: Manual CD Trigger Workflow Push to Docker
+on:
+  push:
+   branches:
+     - main
+
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: checkout-code
+       uses: actions/checkout@v2
+
+     - name: setup python
+       uses: actions/setup-python@v2
+       with:
+           python-version: '3.8'
+
+          
+     - name: build Docker Image
+       run: |
+         cd Assignment/Task2
+         docker build -t jackpot .
+
+     
+     - name: Run Docker Image
+       run: |
+         cd Assignment/Task2
+         docker run  -d -p 5002:5002 --name cdworkflow jackpot:latest
